@@ -1,0 +1,33 @@
+﻿<Window x:Class="ObjekteVererbungXMLSerialisierung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObjekteVererbungXMLSerialisierung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="366.185" Width="708.092">
+    <Grid>
+        <ListBox x:Name="listBoxTürArten" HorizontalAlignment="Left" Height="100" Margin="10,41,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBoxTürArten_SelectionChanged" SelectionMode="Multiple" ToolTip="Auswahl der anzuzeigenden Türarten (Mehrfachauswahl möglich)"/>
+        <Label x:Name="labelAufstellungsorte" Content="Aufstellungesorte" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBoxAufstellungsorte" HorizontalAlignment="Left" Height="100" Margin="10,199,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBoxAufstellungsorte_SelectionChanged" ToolTip="Der Auftsellungsort"/>
+        <ListBox x:Name="listBox_Möbel" HorizontalAlignment="Left" Height="316" Margin="497,10,0,0" VerticalAlignment="Top" Width="193" ToolTip="alle Möbelstücke (per Code erzeugt)">
+            <ListBox.BindingGroup>
+                <BindingGroup/>
+            </ListBox.BindingGroup>
+            <ListBox.ItemBindingGroup>
+                <BindingGroup/>
+            </ListBox.ItemBindingGroup>
+        </ListBox>
+        <Label x:Name="label_TürArten" Content="Türarten" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox_AusgewählteMöbel" HorizontalAlignment="Left" Height="316" Margin="118,10,0,0" VerticalAlignment="Top" Width="374" ToolTip="Alle Möbelstücke, welche den Bedingungen entsprechen">
+            <ListBox.BindingGroup>
+                <BindingGroup/>
+            </ListBox.BindingGroup>
+            <ListBox.ItemBindingGroup>
+                <BindingGroup/>
+            </ListBox.ItemBindingGroup>
+        </ListBox>
+        <Button x:Name="button_Speichern" Content="Speichern" HorizontalAlignment="Left" Margin="26,304,0,0" VerticalAlignment="Top" Width="75" ToolTip="Speichert die ausgewählten Möbelstücke in einer Datei" Click="button_Speichern_Click"/>
+
+    </Grid>
+</Window>
